@@ -1,0 +1,43 @@
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Jupyter runtime (auto generated)
+.local/
+.local/share/
+.local/share/jupyter/
+.local/share/jupyter/runtime/
+
+# Security tokens / cookies
+notebook_cookie_secret
+nbserver-*.json
+
+# --- SageMath ---
+.sage/
+*.sage.py
+*.sage.pyc
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional, keep if you customize)
+.vscode/
+
+# --- Generated images ---
+images/generated/
+images/tmp/
