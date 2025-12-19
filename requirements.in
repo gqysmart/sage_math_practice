@@ -1,0 +1,31 @@
+# Sagework - requirements.in
+# Purpose: notebooks + scientific computing + classical ML
+# Notes:
+# - Keep this file minimal; pin versions in requirements.txt via pip-tools.
+# - If you use SageMath's bundled Python/kernel, do NOT pip install into it.
+#   Instead, use a project venv (.venv) and register an ipykernel.
+
+# --- Core scientific stack ---
+numpy
+scipy
+pandas
+
+# --- ML / data processing ---
+scikit-learn
+
+# --- Visualization ---
+matplotlib
+
+# --- Notebooks / Jupyter ---
+jupyter
+ipykernel
+
+# --- Utilities / quality of life ---
+tqdm
+rich
+
+# --- (Optional) math / symbolic ---
+sympy
+
+# --- Dev / tooling ---
+pip-tools
