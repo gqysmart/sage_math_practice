@@ -7,7 +7,7 @@ The quadratic form model represents how a vector interacts with a symmetric matr
 In this model:
 
 - Objects of interest are vectors $v \in \mathbb{R}^d$
-- A symmetric matrix $A \in \mathbb{R}^{dxd} defines a scalar-valued function
+- A symmetric matrix $A \in \mathbb{R}^{dxd}$ defines a scalar-valued function
 - The interaction between v and A is expressed as quadratic form
 
 The central object of the model is the mapping:

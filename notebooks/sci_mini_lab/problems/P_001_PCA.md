@@ -50,7 +50,40 @@ Projected variance can be expressed as a quadratic form optimaztion problem.
 See model definition in:
 
 - [M-001_Covariance.md](../models/M_001_Covariance.md)
-- M_002_Quadratic_Form.md
+- [M_002_Quadratic_Form.md](../models//M_002_Quadratic_Form.md)
 
+## Notes
+
+1. PCA 问题，
+
+$$
+arg(v) \max_{||v|| = 1} Var(v^TX) \iff arg(v) \max_{||v||=1}v^T \Sigma v
+$$
+
+$ v^T X$表示随机向量X在v方向的投影, 其是一个随机变量； $\Sigma$为协方差算子
+$$
+Cov(X) = \mathbb E (XX^T) =\Sigma
+$$
+
+证明：令随机变量$Y = v^TX$,v(nx1)为常量,X(nx1)随机变量; $v^TX = X^Tv =标量$
+$$
+\mathbb{E} (Y) = E(v^T X) = v^T \mathbb{E}X = v^t \mu \\ 
+\begin{aligned}
+Var(Y) &= \mathbb{E}([Y-E(Y)^2]) \\
+&= \mathbb{E}(v^TX-v^T\mu)^2 \\
+&= \mathbb{E}(v^T(X - \mu))(v^T(X - \mu)) \\
+&= \mathbb{E}(v^T(X - \mu)(X-\mu)^Tv) \\
+&= v^T \Sigma v
+\end{aligned} \\
+$$
+By the Rayleigh-Ritz theorem, the solution is given by the leading eigenvectors of $\Sigma$.
+
+See: [P_002_Rayleigh_Quotient.md](./P_002_Rayleigh_Quotient.md)
+
+1. PCA can be computed via SVD because the covariance matrix satisfies
+Σ = (1/n) XᵀX. The eigenvectors of Σ are therefore identical to the right
+singular vectors of X, and the eigenvalues correspond to the squared
+singular values scaled by 1/n. Hence, performing SVD on the centered data
+matrix directly yields the principal components without explicitly forming the covariance matrix.
 
 

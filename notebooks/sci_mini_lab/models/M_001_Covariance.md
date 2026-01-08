@@ -66,3 +66,6 @@ As a result, the covariance model is most appropriate when global linear structu
 - The covariance matrix is symmetric and positive semi-definite
 - Different problems may impose additional constraints or interpretations
   on the covariance structure
+
+- 
+  
