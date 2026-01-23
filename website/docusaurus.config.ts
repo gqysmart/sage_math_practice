@@ -5,8 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  trailingSlash: true,
+  title: 'Modeling Notes',
+tagline: 'Math • Modeling • AI Notes',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -74,27 +75,16 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
+   navbar: {
+  title: 'Modeling Notes',
+  logo: { alt: 'Modeling Notes', src: 'img/logo.svg' },
+  items: [
+    { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Notes' },
+    { to: '/blog', label: 'Blog', position: 'left' },
+    { href: 'https://github.com/qiyunge/modeling-notes', label: 'GitHub', position: 'right' },
+  ],
+},
+
     footer: {
       style: 'dark',
       links: [
@@ -133,12 +123,14 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/qiyunge/modeling-notes',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright:
+  `Copyright © ${new Date().getFullYear()} Qiyun Ge. Built with Docusaurus.`,
+
     },
     prism: {
       theme: prismThemes.github,
